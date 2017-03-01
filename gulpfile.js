@@ -7,6 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var cleanCss   = require('gulp-clean-css');
 var rename     = require('gulp-rename');
 var livereload = require('gulp-livereload');
+var gutil      = require('gulp-util');
 
 function handleError(err) {
     console.error(err.toString());
@@ -24,11 +25,12 @@ gulp.task('js', function() {
 
 gulp.task('sass', function () {
     console.log("sass");
+    console.log(gutil.env.type);
     return gulp.src('./sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', handleError))
-    .pipe(cleanCss())
-    .pipe(sourcemaps.write())
+    .pipe(gutil.env.type === 'production' ? cleanCss() : gutil.noop())
+    .pipe(gutil.env.type === 'production' ? gutil.noop() : sourcemaps.write())
     .pipe(rename({
         basename: "wufoo"
     }))

@@ -9,8 +9,8 @@
 }
 
 .wufoo {
-    font-family: HelveticaNeueW01-55Roma,Helvetica,Arial,sans-serif;
-    font-size: 15px;
+    font-family: $font-family;
+    font-size: $font-size;
     line-height: 1.42857143;
     color: $font-color;
 }
@@ -20,7 +20,7 @@
 }
 
 .confirm h2 {
-    font-size: 15px;
+    font-size: $font-size;
 }
 
 .wufoo li {
@@ -34,7 +34,7 @@
 }
 
 form li {
-    margin-bottom: 15px;
+    margin-bottom: $font-size;
     padding: 0;
 }
 
