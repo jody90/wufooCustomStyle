@@ -1,3 +1,144 @@
-body {
-    border: 1px solid black;
+#header,
+#logo {
+    display: none;
+}
+
+#container.ltr {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.wufoo {
+    font-family: HelveticaNeueW01-55Roma,Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: $font-color;
+}
+
+.confirm .wufoo {
+    text-align: left;
+}
+
+.confirm h2 {
+    font-size: 15px;
+}
+
+.wufoo li {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wufoo label.desc,
+.wufoo legend.desc {
+    font-weight: normal;
+}
+
+form li {
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+form span.req {
+    color: $font-color !important;
+}
+
+.wufoo input.btTxt.submit {
+    background: #006bb3;
+    color: #fff;
+    border-radius: 3px;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.wufoo input.btTxt.submit:hover {
+    background: #004d87;
+    color: #fff;
+}
+
+.wufoo input.text,
+.wufoo textarea.textarea,
+.wufoo input.file,
+.wufoo select.select {
+    border: 3px solid #eee;
+    height: 40px;
+    box-shadow: none;
+    width: 100%;
+    outline: 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #555;
+    padding: 6px 12px;
+}
+
+.wufoo input.text:focus,
+.wufoo textarea.textarea:focus,
+.wufoo input.file:focus,
+.wufoo select.select:focus {
+    border-color: #004d87;
+    box-shadow: none;
+    outline: 0;
+}
+
+form .instruct {
+    position: relative;
+    margin: 0;
+}
+
+.wufoo .instruct {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form li.focused,
+.wufoo li.focused {
+    background-color: transparent;
+}
+
+form li.focused .instruct,
+form li:hover .instruct {
+    left: 0;
+}
+
+// Error
+form li.error {
+    background: none !important;
+    margin-bottom: 15px !important;
+}
+
+form li.error .desc {
+    color: $font-color !important;
+    font-weight: 400 !important;
+}
+
+form li.error input {
+    border-color: #f00 !important;
+}
+
+#errorLi,
+.error-container {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+@media (max-width: $screen-sm-max) {
+
+    form li.rightHalf,
+    form li.rightThird,
+    form li.rightFourth,
+    form li.rightFifth,
+    form li.leftHalf,
+    form li.leftThird,
+    form li.leftFourth,
+    form li.leftFifth {
+        clear: none !important;
+        float: none;
+    }
+
+    form li.leftHalf,
+    form li.rightHalf {
+        width: 100% !important;
+    }
 }
